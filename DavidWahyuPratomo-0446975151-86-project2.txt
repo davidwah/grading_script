@@ -1,0 +1,761 @@
+   Static hostname: localhost.localdomain
+         Icon name: computer-vm
+           Chassis: vm
+        Machine ID: 7f8e1b729b284d8e8979a52700087d05
+           Boot ID: 32f44a947457443bb9c269cde634172a
+    Virtualization: oracle
+  Operating System: CentOS Linux 8 (Core)
+       CPE OS Name: cpe:/o:centos:centos:8
+            Kernel: Linux 4.18.0-193.14.2.el8_2.x86_64
+      Architecture: x86-64
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether 52:54:00:72:fe:6e brd ff:ff:ff:ff:ff:ff
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether 08:00:27:33:da:99 brd ff:ff:ff:ff:ff:ff
+4: br-a1e946f66383: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default 
+    link/ether 02:42:76:1e:87:00 brd ff:ff:ff:ff:ff:ff
+5: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default 
+    link/ether 02:42:a4:1a:be:1f brd ff:ff:ff:ff:ff:ff
+7: vethdf13420@if6: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-a1e946f66383 state UP mode DEFAULT group default 
+    link/ether 22:ef:04:bb:ae:56 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+9: vethee901be@if8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-a1e946f66383 state UP mode DEFAULT group default 
+    link/ether aa:93:6c:58:a7:ea brd ff:ff:ff:ff:ff:ff link-netnsid 1
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 52:54:00:72:fe:6e brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute eth0
+       valid_lft 84033sec preferred_lft 84033sec
+    inet6 fe80::5054:ff:fe72:fe6e/64 scope link 
+       valid_lft forever preferred_lft forever
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:33:da:99 brd ff:ff:ff:ff:ff:ff
+    inet 172.28.128.4/24 brd 172.28.128.255 scope global dynamic noprefixroute eth1
+       valid_lft 333sec preferred_lft 333sec
+    inet6 fe80::a00:27ff:fe33:da99/64 scope link 
+       valid_lft forever preferred_lft forever
+4: br-a1e946f66383: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 02:42:76:1e:87:00 brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-a1e946f66383
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:76ff:fe1e:8700/64 scope link 
+       valid_lft forever preferred_lft forever
+5: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:a4:1a:be:1f brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+7: vethdf13420@if6: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-a1e946f66383 state UP group default 
+    link/ether 22:ef:04:bb:ae:56 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet6 fe80::20ef:4ff:febb:ae56/64 scope link 
+       valid_lft forever preferred_lft forever
+9: vethee901be@if8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-a1e946f66383 state UP group default 
+    link/ether aa:93:6c:58:a7:ea brd ff:ff:ff:ff:ff:ff link-netnsid 1
+    inet6 fe80::a893:6cff:fe58:a7ea/64 scope link 
+       valid_lft forever preferred_lft forever
+Permissive
+docker-ce-cli-19.03.12-3.el7.x86_64
+docker-ce-19.03.12-3.el7.x86_64
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+wordpress           latest              f1da35a7ddca        5 days ago          546MB
+mariadb             latest              b95867b52886        6 days ago          407MB
+ubuntu              latest              1e4467b07108        3 weeks ago         73.9MB
+hello-world         latest              bf756fb1ae65        7 months ago        13.3kB
+ls: cannot access '/root/var': Permission denied
+NETWORK ID          NAME                 DRIVER              SCOPE
+c063d2e84591        bridge               bridge              local
+1b3fe9466fc5        host                 host                local
+a1e946f66383        mariadb-wp-privnet   bridge              local
+fd6398637cae        none                 null                local
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
+60ed6aab8990        wordpress           "docker-entrypoint.s…"   12 minutes ago      Up 12 minutes       0.0.0.0:80->80/tcp   wordpress
+5d4e7049b4e3        mariadb             "docker-entrypoint.s…"   12 minutes ago      Up 12 minutes       3306/tcp             wordpressdb
+[
+    {
+        "Name": "mariadb-wp-privnet",
+        "Id": "a1e946f663839b1fad810783b5456b715d2997dc51e3fdf8667edf9fd4241091",
+        "Created": "2020-08-13T10:50:04.146600967+07:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": true,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "5d4e7049b4e352789d71622b7f7930b93a7a5e8068f764481eda6eb7a72696e7": {
+                "Name": "wordpressdb",
+                "EndpointID": "db2d75da0e5f5a300760522ff940d3dde69c4172581c40b51ea6b28faf15c25e",
+                "MacAddress": "02:42:ac:12:00:02",
+                "IPv4Address": "172.18.0.2/16",
+                "IPv6Address": ""
+            },
+            "60ed6aab8990833f674ccafa3926c752d881d4dc1d011c673295f07f88830953": {
+                "Name": "wordpress",
+                "EndpointID": "ea9e73e15e4908594d0c0bfec29b5f00bb66dab04a0949a8e2ea954d5892422f",
+                "MacAddress": "02:42:ac:12:00:03",
+                "IPv4Address": "172.18.0.3/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {}
+    }
+]
+[
+    {
+        "Id": "5d4e7049b4e352789d71622b7f7930b93a7a5e8068f764481eda6eb7a72696e7",
+        "Created": "2020-08-18T04:51:13.441029629Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "mysqld"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 3514,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2020-08-18T04:51:17.064462949Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:b95867b5288692523149a43cf511b91dd180cd40dffd6b607bdaa5b8f03da00d",
+        "ResolvConfPath": "/var/lib/docker/containers/5d4e7049b4e352789d71622b7f7930b93a7a5e8068f764481eda6eb7a72696e7/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/5d4e7049b4e352789d71622b7f7930b93a7a5e8068f764481eda6eb7a72696e7/hostname",
+        "HostsPath": "/var/lib/docker/containers/5d4e7049b4e352789d71622b7f7930b93a7a5e8068f764481eda6eb7a72696e7/hosts",
+        "LogPath": "/var/lib/docker/containers/5d4e7049b4e352789d71622b7f7930b93a7a5e8068f764481eda6eb7a72696e7/5d4e7049b4e352789d71622b7f7930b93a7a5e8068f764481eda6eb7a72696e7-json.log",
+        "Name": "/wordpressdb",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/root/var/lib/mysql:/var/lib/mysql"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "mariadb-wp-privnet",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Capabilities": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "KernelMemory": 0,
+            "KernelMemoryTCP": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/417087a43108a95c48cda48a4c11c7d88b398e398ff8657927b55fe5b0c8223a-init/diff:/var/lib/docker/overlay2/cc52c83756bafac0cdf754d3ab9368e507bb92c573903daafa66ac4d3e98c72e/diff:/var/lib/docker/overlay2/7fab629265e8fdc8beade4c483941b2558766caf3c8e56e98e51e0392684c00d/diff:/var/lib/docker/overlay2/15e1a7409322c1d7552bd2da48930b895c2cd17ca74dce3230eea5e23e12690a/diff:/var/lib/docker/overlay2/3917ae010c88a560a7ebe09f93fa21120d5f5e0bdc1c6e075f3829bb5fb7d64d/diff:/var/lib/docker/overlay2/6fa29f95bfb1f0ca72204c3db1ac3e044fc7f17fe8be95deae3e1ead25221381/diff:/var/lib/docker/overlay2/33570555268a8c330a6b329d1be4f15b350bc1a0e0bb485adf04fec959df82ef/diff:/var/lib/docker/overlay2/96e1b7c15450725d115cc397482dfad9b0fb4e8c3cd12dd8da98fc445f24ac42/diff:/var/lib/docker/overlay2/a5fb9551589bdc4322bf7e0d2a05c5692763c61cfe06f145197d083249965327/diff:/var/lib/docker/overlay2/08efa581695d06cb217ada8a3ff405b69174560bb971a1d32acbb6bc4cf53497/diff:/var/lib/docker/overlay2/85e74d7db8575ac9adf669113ecde00de119c0212a661635ef543a637aa1e6c6/diff:/var/lib/docker/overlay2/2b86a21c09acc1fe2efd98bcfab537620368d8f2aadea43e6262246d2de9252a/diff:/var/lib/docker/overlay2/56cde104a6d0f362f5f7b140389430867441d034998bf5bbf521a8b92368e84d/diff:/var/lib/docker/overlay2/76387c581183ac0edb0d8ad8841d815abba0e73552cd1c97285fe5c819d3e924/diff",
+                "MergedDir": "/var/lib/docker/overlay2/417087a43108a95c48cda48a4c11c7d88b398e398ff8657927b55fe5b0c8223a/merged",
+                "UpperDir": "/var/lib/docker/overlay2/417087a43108a95c48cda48a4c11c7d88b398e398ff8657927b55fe5b0c8223a/diff",
+                "WorkDir": "/var/lib/docker/overlay2/417087a43108a95c48cda48a4c11c7d88b398e398ff8657927b55fe5b0c8223a/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/root/var/lib/mysql",
+                "Destination": "/var/lib/mysql",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "5d4e7049b4e3",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "3306/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "MYSQL_USER=wordpress",
+                "MYSQL_PASSWORD=redhat",
+                "MYSQL_ROOT_PASSWORD=redhat",
+                "MYSQL_DATABASE=wordpress",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.12",
+                "GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8",
+                "MARIADB_MAJOR=10.5",
+                "MARIADB_VERSION=1:10.5.5+maria~focal"
+            ],
+            "Cmd": [
+                "mysqld"
+            ],
+            "Image": "mariadb",
+            "Volumes": {
+                "/var/lib/mysql": {}
+            },
+            "WorkingDir": "",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "ef8f897003bde06077b205b5fb78016b430ee35aebe89c995065e73dda5f5238",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "3306/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/ef8f897003bd",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "mariadb-wp-privnet": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "5d4e7049b4e3"
+                    ],
+                    "NetworkID": "a1e946f663839b1fad810783b5456b715d2997dc51e3fdf8667edf9fd4241091",
+                    "EndpointID": "db2d75da0e5f5a300760522ff940d3dde69c4172581c40b51ea6b28faf15c25e",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:12:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+[
+    {
+        "Id": "60ed6aab8990833f674ccafa3926c752d881d4dc1d011c673295f07f88830953",
+        "Created": "2020-08-18T04:51:24.438988661Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "apache2-foreground"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 3685,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2020-08-18T04:51:28.044783306Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:f1da35a7ddca022240b522847aa00229a53a0a4f7bd2591ab8c48af793276273",
+        "ResolvConfPath": "/var/lib/docker/containers/60ed6aab8990833f674ccafa3926c752d881d4dc1d011c673295f07f88830953/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/60ed6aab8990833f674ccafa3926c752d881d4dc1d011c673295f07f88830953/hostname",
+        "HostsPath": "/var/lib/docker/containers/60ed6aab8990833f674ccafa3926c752d881d4dc1d011c673295f07f88830953/hosts",
+        "LogPath": "/var/lib/docker/containers/60ed6aab8990833f674ccafa3926c752d881d4dc1d011c673295f07f88830953/60ed6aab8990833f674ccafa3926c752d881d4dc1d011c673295f07f88830953-json.log",
+        "Name": "/wordpress",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/root/var/www/html:/var/www/html"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "mariadb-wp-privnet",
+            "PortBindings": {
+                "80/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "80"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Capabilities": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "KernelMemory": 0,
+            "KernelMemoryTCP": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/cad1b9255a184df650a460c7e7716f7965c155e49828640c4e85e3d61f50d954-init/diff:/var/lib/docker/overlay2/ca6a4ee969e92adbbefefdb8c7124d2557f77073f3e4e3020958a0613711460f/diff:/var/lib/docker/overlay2/87ce438eae69a9305f75754a09e251294a739975346b7669195905917050af97/diff:/var/lib/docker/overlay2/e27aef22041167d9d4aac282292416d76089690bf73ee1e949cf54b313ef719b/diff:/var/lib/docker/overlay2/a5af1c11d140400883aa07cc639d56c64847b00354936cbc95833e4c70593808/diff:/var/lib/docker/overlay2/5617bdd42b9783158d3536babe33c593e4a5af471e48c553411efbc66d9be255/diff:/var/lib/docker/overlay2/27e8a10ff5f5e7ff94bfd073640c1aa8532f313c8a4c531b65156c71e8125de2/diff:/var/lib/docker/overlay2/ab4550c09da8e756f83b2349c89159864b34c281893fbae3948199f0cdba87ae/diff:/var/lib/docker/overlay2/fe2fa0128c03d6306326905fb8f8bbf28ff1d21445457504033f81b8d57e91a5/diff:/var/lib/docker/overlay2/89615acc9efe3b27655df558ae652a8b0ea6f503b9bc8313277e9e24f6b9c68b/diff:/var/lib/docker/overlay2/20de36cca3f1c4720ead4f9ad4279e577bbabc94ab21530f17646e2b77918d90/diff:/var/lib/docker/overlay2/adaf486a4b7fae3d364730a4ed86bcaae4ef8cfc0965382862415a385dc3d5ba/diff:/var/lib/docker/overlay2/023c2c255ec2f34494b25d55e6ddb772cc5fc10d97e544ba5364abbb04057d86/diff:/var/lib/docker/overlay2/8afaebe438671ae441054658fbca5ede79ebd62757f5fbd55c9a01a9bb4e30cc/diff:/var/lib/docker/overlay2/aa157a188097ad42afc1d7a15ed60eb101ebbd86d91203487eb2407fe0a06494/diff:/var/lib/docker/overlay2/92e0b9e03ec6659cdff9f8d8d0b939d19eaa784f97327157c0bfd5dfe114916d/diff:/var/lib/docker/overlay2/a07db5b056080c4c841a6871edbfdef1eee70cf72d9fc8972c4b79f1ac3c802b/diff:/var/lib/docker/overlay2/18915cba48c561523ad383940f40f4662aae5c65ce3445b8bbab110b9c04f187/diff:/var/lib/docker/overlay2/5aa8751e2143b33c3b47ec2de4b97d3558bee8456ef7e8f75d46dc2cbeaf13db/diff:/var/lib/docker/overlay2/55cbaeb17878742a4c1fdf0e4cb496db85befc08c3f5a37fd35ade4bb80ff88a/diff:/var/lib/docker/overlay2/e288299b9b4fed5b36384ba339f5d03269183c2c0f5f9dcafff10d69337a5155/diff",
+                "MergedDir": "/var/lib/docker/overlay2/cad1b9255a184df650a460c7e7716f7965c155e49828640c4e85e3d61f50d954/merged",
+                "UpperDir": "/var/lib/docker/overlay2/cad1b9255a184df650a460c7e7716f7965c155e49828640c4e85e3d61f50d954/diff",
+                "WorkDir": "/var/lib/docker/overlay2/cad1b9255a184df650a460c7e7716f7965c155e49828640c4e85e3d61f50d954/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/root/var/www/html",
+                "Destination": "/var/www/html",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "60ed6aab8990",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "WORDPRESS_DB_HOST=wordpressdb",
+                "WORDPRESS_DB_USER=wordpress",
+                "WORDPRESS_DB_PASSWORD=redhat",
+                "WORDPRESS_DB_NAME=wordpress",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "PHPIZE_DEPS=autoconf \t\tdpkg-dev \t\tfile \t\tg++ \t\tgcc \t\tlibc-dev \t\tmake \t\tpkg-config \t\tre2c",
+                "PHP_INI_DIR=/usr/local/etc/php",
+                "APACHE_CONFDIR=/etc/apache2",
+                "APACHE_ENVVARS=/etc/apache2/envvars",
+                "PHP_EXTRA_BUILD_DEPS=apache2-dev",
+                "PHP_EXTRA_CONFIGURE_ARGS=--with-apxs2 --disable-cgi",
+                "PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64",
+                "PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64",
+                "PHP_LDFLAGS=-Wl,-O1 -pie",
+                "GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312",
+                "PHP_VERSION=7.4.9",
+                "PHP_URL=https://www.php.net/distributions/php-7.4.9.tar.xz",
+                "PHP_ASC_URL=https://www.php.net/distributions/php-7.4.9.tar.xz.asc",
+                "PHP_SHA256=23733f4a608ad1bebdcecf0138ebc5fd57cf20d6e0915f98a9444c3f747dc57b",
+                "PHP_MD5=",
+                "WORDPRESS_VERSION=5.5",
+                "WORDPRESS_SHA1=03fe1a139b3cd987cc588ba95fab2460cba2a89e"
+            ],
+            "Cmd": [
+                "apache2-foreground"
+            ],
+            "Image": "wordpress",
+            "Volumes": {
+                "/var/www/html": {}
+            },
+            "WorkingDir": "/var/www/html",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {},
+            "StopSignal": "SIGWINCH"
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "c6d0503b9bf899103b2b3f50d3616e160590275f25eb0f123ee9c722bed74716",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "80/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "80"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/c6d0503b9bf8",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "mariadb-wp-privnet": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "60ed6aab8990"
+                    ],
+                    "NetworkID": "a1e946f663839b1fad810783b5456b715d2997dc51e3fdf8667edf9fd4241091",
+                    "EndpointID": "ea9e73e15e4908594d0c0bfec29b5f00bb66dab04a0949a8e2ea954d5892422f",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.3",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:12:00:03",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+FirewallD is not running
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="noindex,nofollow" />
+	<title>WordPress &rsaquo; Installation</title>
+	<link rel='stylesheet' id='dashicons-css'  href='http://localhost/wp-includes/css/dashicons.min.css?ver=5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='buttons-css'  href='http://localhost/wp-includes/css/buttons.min.css?ver=5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='forms-css'  href='http://localhost/wp-admin/css/forms.min.css?ver=5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='l10n-css'  href='http://localhost/wp-admin/css/l10n.min.css?ver=5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='install-css'  href='http://localhost/wp-admin/css/install.min.css?ver=5.5' type='text/css' media='all' />
+</head>
+<body class="wp-core-ui language-chooser">
+<p id="logo">WordPress</p>
+
+	<form id="setup" method="post" action="?step=1"><label class='screen-reader-text' for='language'>Select a default language</label>
+<select size='14' name='language' id='language'>
+<option value="" lang="en" selected="selected" data-continue="Continue" data-installed="1">English (United States)</option>
+<option value="af" lang="af" data-continue="Gaan voort">Afrikaans</option>
+<option value="ar" lang="ar" data-continue="المتابعة">العربية</option>
+<option value="ary" lang="ar" data-continue="المتابعة">العربية المغربية</option>
+<option value="as" lang="as" data-continue="Continue">অসমীয়া</option>
+<option value="azb" lang="az" data-continue="Continue">گؤنئی آذربایجان</option>
+<option value="az" lang="az" data-continue="Davam">Azərbaycan dili</option>
+<option value="bel" lang="be" data-continue="Працягнуць">Беларуская мова</option>
+<option value="bg_BG" lang="bg" data-continue="Напред">Български</option>
+<option value="bn_BD" lang="bn" data-continue="এগিয়ে চল.">বাংলা</option>
+<option value="bo" lang="bo" data-continue="མུ་མཐུད་དུ།">བོད་ཡིག</option>
+<option value="bs_BA" lang="bs" data-continue="Nastavi">Bosanski</option>
+<option value="ca" lang="ca" data-continue="Continua">Català</option>
+<option value="ceb" lang="ceb" data-continue="Padayun">Cebuano</option>
+<option value="cs_CZ" lang="cs" data-continue="Pokračovat">Čeština</option>
+<option value="cy" lang="cy" data-continue="Parhau">Cymraeg</option>
+<option value="da_DK" lang="da" data-continue="Fortsæt">Dansk</option>
+<option value="de_AT" lang="de" data-continue="Weiter">Deutsch (Österreich)</option>
+<option value="de_CH" lang="de" data-continue="Weiter">Deutsch (Schweiz)</option>
+<option value="de_CH_informal" lang="de" data-continue="Weiter">Deutsch (Schweiz, Du)</option>
+<option value="de_DE_formal" lang="de" data-continue="Weiter">Deutsch (Sie)</option>
+<option value="de_DE" lang="de" data-continue="Weiter">Deutsch</option>
+<option value="dzo" lang="dz" data-continue="Continue">རྫོང་ཁ</option>
+<option value="el" lang="el" data-continue="Συνέχεια">Ελληνικά</option>
+<option value="en_CA" lang="en" data-continue="Continue">English (Canada)</option>
+<option value="en_GB" lang="en" data-continue="Continue">English (UK)</option>
+<option value="en_AU" lang="en" data-continue="Continue">English (Australia)</option>
+<option value="en_ZA" lang="en" data-continue="Continue">English (South Africa)</option>
+<option value="en_NZ" lang="en" data-continue="Continue">English (New Zealand)</option>
+<option value="eo" lang="eo" data-continue="Daŭrigi">Esperanto</option>
+<option value="es_CL" lang="es" data-continue="Continuar">Español de Chile</option>
+<option value="es_ES" lang="es" data-continue="Continuar">Español</option>
+<option value="es_AR" lang="es" data-continue="Continuar">Español de Argentina</option>
+<option value="es_CO" lang="es" data-continue="Continuar">Español de Colombia</option>
+<option value="es_PE" lang="es" data-continue="Continuar">Español de Perú</option>
+<option value="es_CR" lang="es" data-continue="Continuar">Español de Costa Rica</option>
+<option value="es_PR" lang="es" data-continue="Continuar">Español de Puerto Rico</option>
+<option value="es_UY" lang="es" data-continue="Continuar">Español de Uruguay</option>
+<option value="es_GT" lang="es" data-continue="Continuar">Español de Guatemala</option>
+<option value="es_VE" lang="es" data-continue="Continuar">Español de Venezuela</option>
+<option value="es_MX" lang="es" data-continue="Continuar">Español de México</option>
+<option value="et" lang="et" data-continue="Jätka">Eesti</option>
+<option value="eu" lang="eu" data-continue="Jarraitu">Euskara</option>
+<option value="fa_IR" lang="fa" data-continue="ادامه">فارسی</option>
+<option value="fi" lang="fi" data-continue="Jatka">Suomi</option>
+<option value="fr_CA" lang="fr" data-continue="Continuer">Français du Canada</option>
+<option value="fr_BE" lang="fr" data-continue="Continuer">Français de Belgique</option>
+<option value="fr_FR" lang="fr" data-continue="Continuer">Français</option>
+<option value="fur" lang="fur" data-continue="Continue">Friulian</option>
+<option value="gd" lang="gd" data-continue="Lean air adhart">Gàidhlig</option>
+<option value="gl_ES" lang="gl" data-continue="Continuar">Galego</option>
+<option value="gu" lang="gu" data-continue="ચાલુ રાખવું">ગુજરાતી</option>
+<option value="haz" lang="haz" data-continue="ادامه">هزاره گی</option>
+<option value="he_IL" lang="he" data-continue="המשך">עִבְרִית</option>
+<option value="hi_IN" lang="hi" data-continue="जारी">हिन्दी</option>
+<option value="hr" lang="hr" data-continue="Nastavi">Hrvatski</option>
+<option value="hsb" lang="hsb" data-continue="Dale">Hornjoserbšćina</option>
+<option value="hu_HU" lang="hu" data-continue="Folytatás">Magyar</option>
+<option value="hy" lang="hy" data-continue="Շարունակել">Հայերեն</option>
+<option value="id_ID" lang="id" data-continue="Lanjutkan">Bahasa Indonesia</option>
+<option value="is_IS" lang="is" data-continue="Áfram">Íslenska</option>
+<option value="it_IT" lang="it" data-continue="Continua">Italiano</option>
+<option value="ja" lang="ja" data-continue="次へ">日本語</option>
+<option value="jv_ID" lang="jv" data-continue="Nerusaké">Basa Jawa</option>
+<option value="ka_GE" lang="ka" data-continue="გაგრძელება">ქართული</option>
+<option value="kab" lang="kab" data-continue="Kemmel">Taqbaylit</option>
+<option value="kk" lang="kk" data-continue="Жалғастыру">Қазақ тілі</option>
+<option value="km" lang="km" data-continue="បន្ត">ភាសាខ្មែរ</option>
+<option value="kn" lang="kn" data-continue="ಮುಂದುವರೆಸಿ">ಕನ್ನಡ</option>
+<option value="ko_KR" lang="ko" data-continue="계속">한국어</option>
+<option value="ckb" lang="ku" data-continue="به‌رده‌وام به‌">كوردی‎</option>
+<option value="lo" lang="lo" data-continue="ຕໍ່​ໄປ">ພາສາລາວ</option>
+<option value="lt_LT" lang="lt" data-continue="Tęsti">Lietuvių kalba</option>
+<option value="lv" lang="lv" data-continue="Turpināt">Latviešu valoda</option>
+<option value="mk_MK" lang="mk" data-continue="Продолжи">Македонски јазик</option>
+<option value="ml_IN" lang="ml" data-continue="തുടരുക">മലയാളം</option>
+<option value="mn" lang="mn" data-continue="Үргэлжлүүлэх">Монгол</option>
+<option value="mr" lang="mr" data-continue="सुरु ठेवा">मराठी</option>
+<option value="ms_MY" lang="ms" data-continue="Teruskan">Bahasa Melayu</option>
+<option value="my_MM" lang="my" data-continue="ဆက်လက်လုပ်ဆောင်ပါ။">ဗမာစာ</option>
+<option value="nb_NO" lang="nb" data-continue="Fortsett">Norsk bokmål</option>
+<option value="ne_NP" lang="ne" data-continue="जारी राख्नुहोस्">नेपाली</option>
+<option value="nl_BE" lang="nl" data-continue="Doorgaan">Nederlands (België)</option>
+<option value="nl_NL" lang="nl" data-continue="Doorgaan">Nederlands</option>
+<option value="nl_NL_formal" lang="nl" data-continue="Doorgaan">Nederlands (Formeel)</option>
+<option value="nn_NO" lang="nn" data-continue="Hald fram">Norsk nynorsk</option>
+<option value="oci" lang="oc" data-continue="Contunhar">Occitan</option>
+<option value="pa_IN" lang="pa" data-continue="ਜਾਰੀ ਰੱਖੋ">ਪੰਜਾਬੀ</option>
+<option value="pl_PL" lang="pl" data-continue="Kontynuuj">Polski</option>
+<option value="ps" lang="ps" data-continue="دوام ورکړه">پښتو</option>
+<option value="pt_PT_ao90" lang="pt" data-continue="Continuar">Português (AO90)</option>
+<option value="pt_PT" lang="pt" data-continue="Continuar">Português</option>
+<option value="pt_BR" lang="pt" data-continue="Continuar">Português do Brasil</option>
+<option value="pt_AO" lang="pt" data-continue="Continuar">Português de Angola</option>
+<option value="rhg" lang="rhg" data-continue="Continue">Ruáinga</option>
+<option value="ro_RO" lang="ro" data-continue="Continuă">Română</option>
+<option value="ru_RU" lang="ru" data-continue="Продолжить">Русский</option>
+<option value="sah" lang="sah" data-continue="Салҕаа">Сахалыы</option>
+<option value="snd" lang="sd" data-continue="اڳتي هلو">سنڌي</option>
+<option value="si_LK" lang="si" data-continue="දිගටම කරගෙන යන්න">සිංහල</option>
+<option value="sk_SK" lang="sk" data-continue="Pokračovať">Slovenčina</option>
+<option value="skr" lang="skr" data-continue="جاری رکھو">سرائیکی</option>
+<option value="sl_SI" lang="sl" data-continue="Nadaljuj">Slovenščina</option>
+<option value="sq" lang="sq" data-continue="Vazhdo">Shqip</option>
+<option value="sr_RS" lang="sr" data-continue="Настави">Српски језик</option>
+<option value="sv_SE" lang="sv" data-continue="Fortsätt">Svenska</option>
+<option value="sw" lang="sw" data-continue="Endelea">Kiswahili</option>
+<option value="szl" lang="szl" data-continue="Kōntynuować">Ślōnskŏ gŏdka</option>
+<option value="ta_IN" lang="ta" data-continue="தொடரவும்">தமிழ்</option>
+<option value="te" lang="te" data-continue="కొనసాగించు">తెలుగు</option>
+<option value="th" lang="th" data-continue="ต่อไป">ไทย</option>
+<option value="tl" lang="tl" data-continue="Magpatuloy">Tagalog</option>
+<option value="tr_TR" lang="tr" data-continue="Devam">Türkçe</option>
+<option value="tt_RU" lang="tt" data-continue="дәвам итү">Татар теле</option>
+<option value="tah" lang="ty" data-continue="Continue">Reo Tahiti</option>
+<option value="ug_CN" lang="ug" data-continue="داۋاملاشتۇرۇش">ئۇيغۇرچە</option>
+<option value="uk" lang="uk" data-continue="Продовжити">Українська</option>
+<option value="ur" lang="ur" data-continue="جاری رکھیں">اردو</option>
+<option value="uz_UZ" lang="uz" data-continue="Davom etish">O‘zbekcha</option>
+<option value="vi" lang="vi" data-continue="Tiếp tục">Tiếng Việt</option>
+<option value="zh_TW" lang="zh" data-continue="繼續">繁體中文</option>
+<option value="zh_CN" lang="zh" data-continue="继续">简体中文</option>
+<option value="zh_HK" lang="zh" data-continue="繼續">香港中文版	</option>
+</select>
+<p class="step"><span class="spinner"></span><input id="language-continue" type="submit" class="button button-primary button-large" value="Continue" /></p></form><script type="text/javascript">var t = document.getElementById('weblog_title'); if (t){ t.focus(); }</script>
+	<script type='text/javascript' src='http://localhost/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-js'></script>
+<script type='text/javascript' src='http://localhost/wp-admin/js/language-chooser.min.js?ver=5.5' id='language-chooser-js'></script>
+<script type="text/100 12411    0 12411    0     0   5580      0 --:--:--  0:00:02 --:--:--  5580100 12411    0 12411    0     0   5577      0 --:--:--  0:00:02 --:--:--     0
+javascript">
+jQuery( function( $ ) {
+	$( '.hide-if-no-js' ).removeClass( 'hide-if-no-js' );
+} );
+</script>
+</body>
+</html>
